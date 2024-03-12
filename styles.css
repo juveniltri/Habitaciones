@@ -24,7 +24,7 @@ button {
     color: white;
 }
 
-.casa, .persona {
+.casa {
     border: 1px solid #ccc;
     margin: 10px 0;
     padding: 10px;
@@ -32,8 +32,30 @@ button {
 }
 
 .habitacion {
-    margin: 5px;
-    padding: 5px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.persona {
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    padding: 8px;
+    cursor: grab;
+}
+.persona:hover {
+    background-color: #f8f9fa;
+}
+.acordeon-boton {
+    width: 100%;
+    text-align: left;
+}
+.acordeon-boton:hover, .acordeon-boton:focus {
+    text-decoration: none;
+}
+.acordeon-boton.collapsed {
+    background-color: #e9ecef;
 }

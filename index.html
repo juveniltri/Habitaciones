@@ -3,19 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Gestor de Convivencias</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="formularioCasa">
-        <input type="text" id="nombreCasa" placeholder="Nombre de la Casa">
-        <button onclick="agregarCasa()">Agregar Casa</button>
+    <div class="container mt-3">
+        <button id="limpiarCache" class="btn btn-warning mb-3">
+            <i class="fas fa-trash-alt"></i> Limpiar Caché y Reiniciar
+        </button>
+        
+        <div class="input-group mb-3">
+            <input type="text" id="nombreCasa" class="form-control" placeholder="Nombre de la Casa">
+            <div class="input-group-append">
+                <button onclick="agregarCasa()" class="btn btn-outline-secondary">Agregar Casa</button>
+            </div>
+        </div>
+    
+        <div id="casas" class="accordion">
+            <!-- Las casas y habitaciones se cargarán aquí -->
+        </div>
+    
+        <div class="mt-4">
+            <textarea id="nombrePersona" class="form-control" rows="5" placeholder="Nombres de las Personas (uno por línea)"></textarea>
+            <button onclick="agregarPersonas()" class="btn btn-primary mt-3">Agregar Personas</button>
+        </div>
+    
+        <div id="personas" class="mt-4">
+            <!-- Las personas se cargarán aquí -->
+        </div>
     </div>
-    <div id="casas"></div>
-    <div id="formularioPersona">
-        <input type="text" id="nombrePersona" placeholder="Nombre de la Persona">
-        <button onclick="agregarPersona()">Agregar Persona</button>
-    </div>
-    <div id="personas"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/cache.js"></script>
+    <script src="js/casas.js"></script>
+    <script src="js/personas.js"></script>
+    <script src="js/visualizar.js"></script>
 </body>
 </html>
